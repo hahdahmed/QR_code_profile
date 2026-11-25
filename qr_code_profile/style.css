@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #10264b;
+  --blue: #1769d2;
+  --ink: #10254a;
+  --muted: #64748b;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 34px 16px;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 50% 22%, rgba(89, 139, 207, .45), transparent 34%),
+    linear-gradient(145deg, #0b1c39, #183963 55%, #0b1d3b);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.page-shell { width: 100%; max-width: 620px; }
+.profile-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #fff 0%, #f5f8fd 100%);
+  box-shadow: 0 24px 70px rgba(0,0,0,.28);
+  padding: 38px 34px 28px;
+}
+.profile-content { position: relative; z-index: 1; }
+.chemistry {
+  position: absolute;
+  color: rgba(36, 100, 180, .08);
+  font-size: 150px;
+  line-height: 1;
+  pointer-events: none;
+}
+.chemistry-left { left: -38px; top: 125px; }
+.chemistry-right { right: -32px; bottom: 30px; }
+.portrait-wrap {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 22px;
+  padding: 7px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #dce8f8;
+  box-shadow: 0 12px 30px rgba(16, 38, 75, .15);
+}
+.portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+  border-radius: 50%;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+  color: #10264b;
+  font-size: clamp(22px, 5vw, 31px);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -.8px;
+}
+.title-line {
+  width: 76px;
+  height: 4px;
+  border-radius: 10px;
+  background: #2676df;
+  margin: 17px auto 12px;
+}
+.profession {
+  margin: 0 0 28px;
+  text-align: center;
+  color: #24518c;
+  font-size: 19px;
+  font-weight: 600;
+}
+.profession span { color: #4383d5; padding: 0 7px; }
+.social-links { display: grid; gap: 13px; }
+.social-link {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border: 1px solid #edf1f7;
+  border-radius: 19px;
+  background: rgba(255,255,255,.94);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 7px 18px rgba(25, 54, 92, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(25, 54, 92, .13);
+}
+.social-icon {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: white;
+}
+.social-icon svg { width: 29px; height: 29px; fill: currentColor; }
+.facebook .social-icon { background: #1877f2; }
+.whatsapp .social-icon { background: #16bd63; }
+.tiktok .social-icon { background: #111827; }
+.youtube .social-icon { background: #f01920; }
+.link-copy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 4px; }
+.link-copy strong { font-size: 17px; font-weight: 700; }
+.link-copy small {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.arrow { font-size: 35px; line-height: 1; color: #2876db; }
+.whatsapp .arrow { color: #16a85b; }
+.tiktok .arrow { color: #111827; }
+.youtube .arrow { color: #e51c23; }
+.footer-note {
+  margin: 25px 0 0;
+  text-align: center;
+  color: #8190a7;
+  font-size: 12px;
+  letter-spacing: .7px;
+}
+@media (max-width: 480px) {
+  body { padding: 16px 10px; }
+  .profile-card { padding: 28px 17px 22px; border-radius: 24px; }
+  .portrait-wrap { width: 184px; height: 184px; }
+  .social-link { min-height: 74px; padding: 11px 12px; gap: 12px; border-radius: 16px; }
+  .social-icon { flex-basis: 46px; width: 46px; height: 46px; border-radius: 13px; }
+  .social-icon svg { width: 26px; height: 26px; }
+  .link-copy strong { font-size: 15px; }
+  .link-copy small { font-size: 11px; }
+}
